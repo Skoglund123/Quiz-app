@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>quiz</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="quiz.js" defer></script>
+</head>
+<body>
+
+    <header>
+        <h1>Välkommen till quizzet</h1>
+        <h2>Vänligen välj kategori nedan</h2>
+    </header>
+    
+    <div class="container" id="app">
+     
+        <div id="question-counter">Fråga 1 av 5</div>
+        
+        <div id="start-page">
+            <h1>Välj ett ämne</h1>
+            <button class="subject-button" onclick="startQuiz('21')">Sport</button>
+            <button class="subject-button" onclick="startQuiz('23')">Historia</button>
+        </div>
+
+       
+        <div id="quiz-page" style="display:none;">
+            <div class="timer" id="timer">Tid kvar: 10s</div>
+            <div class="question" id="question-text"></div>
+            <div class="options" id="options"></div>
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+    
+        <div id="result-page" style="display:none;">
+            <div class="result" id="result-text"></div>
+            <div class="result" id="time-text"></div>
+            <button class="subject-button" onclick="resetQuiz()">Starta om</button>
+        </div>
+    </div>
+</body>
+</html>
